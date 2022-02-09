@@ -11,9 +11,13 @@ const config = {
   access_token_secret:  process.env.TWITTER_ACCESS_TOKEN_SECRET
 };
 
-var bodyParser = require('body-parser');
-app.use(bodyParser.json({limit: "100mb"}));
-app.use(bodyParser.urlencoded({limit: "100mb", extended: true, parameterLimit:50000}));
+var app = express();
+  var jsonParser       = bodyParser.json({limit:1024*1024*20, type:'application/json'});
+  var urlencodedParser = bodyParser.urlencoded({ extended:true,limit:1024*1024*20,type:'application/x-www-form-urlencoded' })
+
+  app.use(jsonParser);
+  app.use(urlencodedParser);
+
 
 const T = new Twitter(config);
 
