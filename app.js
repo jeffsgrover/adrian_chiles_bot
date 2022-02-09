@@ -25,7 +25,7 @@ const T = new Twitter(config);
 
 //Read in the file from above, and act on the data once it's been loaded
 fs.readFile(filename, 'utf8', function(err, data){
-    if (err) throw err;
+  if (err) throw err;
     let tweets = data.split('\n');
 
     //Fetch an random and even-numbered index, since our tweets take up two lines
