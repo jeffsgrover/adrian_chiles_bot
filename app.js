@@ -14,11 +14,8 @@ const config = {
 };
 
 var app = express();
-  var jsonParser       = bodyParser.json({limit:1024*1024*20, type:'application/json'});
-  var urlencodedParser = bodyParser.urlencoded({ extended:true,limit:1024*1024*20,type:'application/x-www-form-urlencoded' })
-
-  app.use(urlencodedParser);
-  app.use(jsonParser);
+  app.use(express.json({limit: '50mb'}));
+  app.use(express.urlencoded({limit: '50mb'}));
 
 
 const T = new Twitter(config);
