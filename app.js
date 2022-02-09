@@ -6,6 +6,7 @@ const fs = require('fs'),
       filename = 'tweets.txt';
 
 dotenv.config();
+
 const config = {
   consumer_key: process.env.CONSUMER_KEY,
   consumer_secret: process.env.CONSUMER_SECRET,
@@ -16,7 +17,6 @@ const config = {
 var app = express();
   app.use(bodyParser.json({limit: '5gb'}));
   app.use(bodyParser.urlencoded({limit: '5gb', extended:true, parameterLimit:50000}));
-
 
 const T = new Twitter(config);
 
