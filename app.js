@@ -13,12 +13,12 @@ const config = {
   access_token_secret:  process.env.TWITTER_ACCESS_TOKEN_SECRET
 };
 
-var app = express();
-  var jsonParser       = bodyParser.json({limit:1024*1024*20, type:'application/json'});
-  var urlencodedParser = bodyParser.urlencoded({ extended:true,limit:1024*1024*20,type:'application/x-www-form-urlencoded' })
+// var app = express();
+//   var jsonParser       = bodyParser.json({limit:1024*1024*20, type:'application/json'});
+//   var urlencodedParser = bodyParser.urlencoded({ extended:true,limit:1024*1024*20,type:'application/x-www-form-urlencoded' })
 
-  app.use(jsonParser);
-  app.use(urlencodedParser);
+//   app.use(jsonParser);
+//   app.use(urlencodedParser);
 
 
 const T = new Twitter(config);
