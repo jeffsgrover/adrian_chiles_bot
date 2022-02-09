@@ -22,7 +22,7 @@ fs.readFile(filename, 'utf8', function(err, data){
     const i = Math.floor(Math.random() * Math.floor(tweets.length/2))*2;
 
     //Construct status using two lines
-    const status = tweets[i] + "\n" + tweets[i+1];
+    const status = tweets[i];
 
     T.post('statuses/update', {status: status},  function(error, tweet) {
       if(error) {
