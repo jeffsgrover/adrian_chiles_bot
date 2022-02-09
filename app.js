@@ -1,6 +1,7 @@
 const fs = require('fs'),
       Twitter = require('twitter'),
       dotenv = require('dotenv'),
+      express = require('express'),
       filename = 'tweets.txt';
 
 dotenv.config();
