@@ -29,7 +29,7 @@ fs.readFile(filename, 'utf8', function(err, data){
     let tweets = data.split('\n');
 
     //Fetch an random and even-numbered index, since our tweets take up two lines
-    const i = Math.random();
+    const i = Math.floor(Math.random());
 
     //Construct status using two lines
     const status = tweets[i];
