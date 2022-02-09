@@ -11,6 +11,10 @@ const config = {
   access_token_secret:  process.env.TWITTER_ACCESS_TOKEN_SECRET
 };
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json({limit: "100mb"}));
+app.use(bodyParser.urlencoded({limit: "100mb", extended: true, parameterLimit:50000}));
+
 const T = new Twitter(config);
 
 //Read in the file from above, and act on the data once it's been loaded
