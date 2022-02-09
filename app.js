@@ -2,6 +2,7 @@ const fs = require('fs'),
       Twitter = require('twitter'),
       dotenv = require('dotenv'),
       express = require('express'),
+      bodyParser = require('bodyParser'),
       filename = 'tweets.txt';
 
 dotenv.config();
