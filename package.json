@@ -7,5 +7,10 @@
   },
   "author": "",
   "license": "",
-  "description": "a twitter bot"
+  "description": "a twitter bot",
+  "dependencies": {
+    "twitter": "1.7.1",
+    "dotenv": "16.0.0",
+    "express": "4.17.2"
+  }
 }
