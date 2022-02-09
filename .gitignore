@@ -131,3 +131,5 @@ dmypy.json
 *.pdf
 .ipynb_checkpoints
 *.rtf
+/node_modules
+.idea/*
